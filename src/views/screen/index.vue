@@ -102,12 +102,11 @@ defineOptions({
                 margin-top: 40px;
 
                 .map_box {
-                    background-color: red;
                     flex: 3;
+                    position: relative;
                 }
 
                 .tourist_line_box {
-                    background-color: yellow;
                     flex: 1;
                 }
             }
