@@ -6,7 +6,7 @@
 <template>
     <div class="container">
         <div class="screen" ref="screenRef">
-            <div class="top">
+            <div>
                 <Top />
             </div>
             <div class="bottom">
@@ -15,7 +15,10 @@
                     <Gender />
                     <Age />
                 </div>
-                <div class="center">中</div>
+                <div class="center">
+                    <Map class="map_box" />
+                    <TouristLine class="tourist_line_box" />
+                </div>
                 <div class="right">右</div>
             </div>
         </div>
@@ -28,6 +31,8 @@ import Top from './components/top/index.vue'
 import Age from './components/age/index.vue'
 import Tourist from './components/tourist/index.vue'
 import Gender from './components/gender/index.vue'
+import Map from './components/map/index.vue'
+import TouristLine from './components/touristLine/index.vue'
 
 const screenRef = ref<HTMLDivElement | null>(null)
 
@@ -69,30 +74,42 @@ defineOptions({
 
         .bottom {
             display: flex;
+            padding: 10px 60px;
 
             .left,
             .right {
                 flex: 1;
-                height: 1040px;
-                margin-top: 10px;
+                height: 1020px;
             }
 
             .left {
                 display: flex;
                 flex-direction: column;
-                margin-left: 60px;
 
                 &>div {
                     margin-bottom: 20px;
                 }
-            }
 
-            .right{
-                margin-right: 60px;
+                &>div:last-child {
+                    margin-bottom: 0;
+                }
             }
 
             .center {
                 flex: 2;
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+
+                .map_box {
+                    background-color: red;
+                    flex: 3;
+                }
+
+                .tourist_line_box {
+                    background-color: yellow;
+                    flex: 1;
+                }
             }
         }
     }
