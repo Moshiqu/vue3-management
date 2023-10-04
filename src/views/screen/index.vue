@@ -99,8 +99,7 @@ defineOptions({
                 flex: 2;
                 display: flex;
                 flex-direction: column;
-                margin-top: 40px;
-
+                margin: 40px 20px 0;
                 .map_box {
                     flex: 3;
                     position: relative;

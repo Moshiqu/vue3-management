@@ -21,7 +21,6 @@ const echartRef = ref()
 echarts.registerMap('china', china as any)
 
 onMounted(() => {
-    console.log(echartRef.value);
     const myChart = echarts.init(echartRef.value)
     const points = [
         { value: [116.405285, 39.904989], itemStyle: { color: '#FFFA00' } },
