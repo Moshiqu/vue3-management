@@ -19,7 +19,11 @@
                     <Map class="map_box" />
                     <TouristLine class="tourist_line_box" />
                 </div>
-                <div class="right">右</div>
+                <div class="right">
+                    <Rank class="rank_box" />
+                    <Comparison class="comparison_box" />
+                    <Statistics class="statistics_box" />
+                </div>
             </div>
         </div>
     </div>
@@ -33,6 +37,9 @@ import Tourist from './components/tourist/index.vue'
 import Gender from './components/gender/index.vue'
 import Map from './components/map/index.vue'
 import TouristLine from './components/touristLine/index.vue'
+import Rank from './components/rank/index.vue'
+import Comparison from './components/comparison/index.vue'
+import Statistics from './components/statistics/index.vue'
 
 const screenRef = ref<HTMLDivElement | null>(null)
 
@@ -80,9 +87,6 @@ defineOptions({
             .right {
                 flex: 1;
                 height: 1020px;
-            }
-
-            .left {
                 display: flex;
                 flex-direction: column;
 
@@ -100,6 +104,7 @@ defineOptions({
                 display: flex;
                 flex-direction: column;
                 margin: 40px 20px 0;
+
                 .map_box {
                     flex: 3;
                     position: relative;

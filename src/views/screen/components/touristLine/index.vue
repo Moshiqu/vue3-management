@@ -88,7 +88,6 @@ onMounted(() => {
             formatter: function (params: any) {
                 const nameArr = params[0].name.split('/')
                 const name = `${nameArr[0]}月${nameArr[1]}日`
-                console.log(name);
                 return name + '<br/>' +
                     "<span style='display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:rgba(1, 251, 246, 1)'></span>" +
                     params[0].seriesName + ' : ' + params[0].value.toLocaleString() + ' 位<br/>'
@@ -180,10 +179,8 @@ onMounted(() => {
             axisLabel: {
                 show: true,
                 // margin: 10,
-                textStyle: {
-                    fontSize: 12,
-                    color: 'rgba(198, 207, 255, 1)'
-                },
+                fontSize: 12,
+                color: 'rgba(198, 207, 255, 1)',
                 formatter: (param: number) => {
                     return param > 9999 ? (param / 10000) + 'w' : param
                 }
